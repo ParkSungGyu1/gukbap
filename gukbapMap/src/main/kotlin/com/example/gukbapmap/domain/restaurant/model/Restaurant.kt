@@ -20,6 +20,9 @@ class Restaurant (
     @Column
     val y: String,
 
+    @Column
+    val review: String?,
+
     @ManyToOne
     val user:User
 ) {
@@ -29,7 +32,7 @@ class Restaurant (
 
     fun to() : RestaurantResponse{
         return RestaurantResponse(
-            id, x, y, UserDto.from(user)
+            id, x, y, review, UserDto.from(user)
         )
     }
 
@@ -38,6 +41,7 @@ class Restaurant (
             return Restaurant(
                 x = restaurantRequest.x,
                 y = restaurantRequest.y,
+                review = restaurantRequest.review,
                 user = user
             )
 

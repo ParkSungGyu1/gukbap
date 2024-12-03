@@ -3,7 +3,6 @@ package com.example.gukbapmap.domain.restaurant.controller
 import com.example.gukbapmap.domain.restaurant.dtos.RestaurantRequest
 import com.example.gukbapmap.domain.restaurant.dtos.RestaurantResponse
 import com.example.gukbapmap.domain.restaurant.service.RestaurantService
-import com.example.gukbapmap.domain.restaurant.service.RestaurantServiceImpl
 import com.example.gukbapmap.securities.UserPrincipal
 import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity
@@ -17,7 +16,7 @@ import org.springframework.web.bind.annotation.RestController
 @RequestMapping("/api/v1/restaurant")
 @RestController
 class RestaurantController (
-    private val restaurantService: RestaurantServiceImpl
+    private val restaurantService: RestaurantService
 ) {
 
     @GetMapping

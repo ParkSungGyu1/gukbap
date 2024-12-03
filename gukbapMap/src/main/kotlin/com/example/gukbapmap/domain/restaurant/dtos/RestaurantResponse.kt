@@ -6,5 +6,6 @@ data class RestaurantResponse (
     val id : Long?,
     val x : String,
     val y : String,
+    val review : String?,
     val user: UserDto
 )
